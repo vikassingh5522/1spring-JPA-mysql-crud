@@ -428,7 +428,9 @@ EntityManager em = emf.createEntityManager();
 5. List All Users
 6. Exit
 
-Would you like that as well?
+=======================================================================================================================================
+
+spring-jpa-mysql-crud
 
 
 
