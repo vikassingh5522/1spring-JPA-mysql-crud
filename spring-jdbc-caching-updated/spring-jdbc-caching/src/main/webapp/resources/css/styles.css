@@ -1,0 +1,168 @@
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.error-message {
+    color: #f44336;
+    background-color: #ffebee;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-add {
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-add:hover {
+    background-color: #45a049;
+}
+
+.btn-edit {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #1e88e5;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #d32f2f;
+}
+
+.btn-nav {
+    background-color: #666;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-nav:hover {
+    background-color: #555;
+}
+
+.btn-nav.active {
+    background-color: #4CAF50;
+    font-weight: bold;
+}
+
+.pagination {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.sorting {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sorting select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a.cancel {
+    color: #f44336;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+a.cancel:hover {
+    text-decoration: underline;
+}
