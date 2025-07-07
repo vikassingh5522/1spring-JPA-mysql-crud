@@ -698,8 +698,31 @@ public void createUser(User user) {
 @Configuration ➝ Creates EntityManagerFactory ➝ Injects EntityManager via @PersistenceContext ➝ @Transactional handles transactions
 ```
 
----
 
-Would you also like a comparison table between **Spring JPA vs Spring Data JPA** (which uses repositories)? Let me know!
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Key Features and Implementation Details
+•
+CRUD Operations: Managed by UserService and UserController, with endpoints for creating, reading, updating, and deleting users. Thymeleaf templates (index.html, user-form.html) provide the UI.
+•
+Caching: EhCache with JCache caches user data in usersCache. UserService caches individual users (getUserById) and the full list (getAllUsers), with @CachePut and @CacheEvict ensuring updates and deletions maintain cache consistency. PaginatedUserService caches paginated and sorted results with unique keys.
+•
+Pagination: Implemented server-side in PaginatedUserService.getPaginatedUsers using SQL LIMIT and OFFSET. paginated-user-list.html renders page navigation and size selection.
+•
+Sorting: Implemented server-side in PaginatedUserService.getSortedUsers using SQL ORDER BY. sorted-user-list.html provides dropdowns for sorting options.
+•
+Transaction Management: @Transactional in UserService ensures database consistency for create, update, and delete operations. CacheConfig enables transaction-aware caching to synchronize cache updates with transaction commits.
+•
+UI Navigation: index.html includes links to paginated-user-list.html and sorted-user-list.html. The new templates link back to index.html and each other, ensuring seamless navigation.
+•
+Error Handling: Displays user-friendly error messages in all templates for invalid inputs or failed operations, using RedirectAttributes in controllers.
+•
+Deployment: Packaged as a WAR file and deployed on Tomcat 11, accessible at http://localhost:8080/spring-jdbc-thymeleaf.
+This structure and implementation provide a robust, scalable CRUD application with efficient data management and a user-friendly interface, while isolating pagination and sorting functionality to avoid modifying core components.
 
 
